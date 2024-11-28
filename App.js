@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './views/home_screen';
 
 export default function App() {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() =>{
+    setLoggedIn(false);
+
+  },[]);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    
+    <View >
+      {isLoggedIn ? (<HomeScreen/>) : (<HomeScreen/>)}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
