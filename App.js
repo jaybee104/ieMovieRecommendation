@@ -8,12 +8,12 @@ export default function App() {
 
   useEffect(() =>{
     setLoggedIn(false);
-
+ 
   },[]);
   return (
-    
     <View >
       {isLoggedIn ? (<HomeScreen/>) : (<HomeScreen/>)}
     </View>
   );
 }
+
