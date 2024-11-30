@@ -12,7 +12,8 @@ export default function App() {
   },[]);
   return (
     <View >
-      {isLoggedIn ? (<HomeScreen/>) : (<HomeScreen/>)}
+      {isLoggedIn ? (<HomeScreen/>) : (<HomeScreen/>)} {/* i used this logic to enable me see the home page. i will update the user Auth later with firebase */}
+      
     </View>
   );
 }

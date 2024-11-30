@@ -1,4 +1,4 @@
-import { View , Text, ScrollView,StyleSheet} from "react-native";
+import { View , Text, ScrollView,StyleSheet,Image} from "react-native";
 const HomeScreenTextTab = () =>{
     return(
         <View style={styles.home_screen_view}>
@@ -17,9 +17,9 @@ const NewReleases = () =>{
             
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.new_release_scrollview}>
                 
-                    <View style={styles.new_release_scrollview_item}><Text>1</Text></View>
-                    <View style={styles.new_release_scrollview_item}><Text>2</Text></View>
-                    <View style={styles.new_release_scrollview_item}><Text>3</Text></View>
+                    <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/mona2.jpg')}/></View>
+                    <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/kraven.jpg')}/></View>
+                    <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/nightbitch.jpg')}/></View>
                 
                 </ScrollView>
             
@@ -50,14 +50,26 @@ const Categories = () =>{
 const MoviesBeingWatched =() =>{
     return(
         <View>
-            <View style={{flexDirection:'row',flex:1,alignContent:'space-evenly'}}>
-                <Text>Movies Beign Watched</Text>
-                <Text>See More</Text>
+            <View style={styles.movies_being_watched_view}>
+                <Text style={styles.movies_being_watched_text1}>Movies Beign Watched</Text>
+                <Text style={styles.movies_being_watched_text2}>See More</Text>
             </View>
 
-        <ScrollView>
-            <View>
-                
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.movies_beign_watched}>
+            <View >
+                <Image style={styles.movies_beign_watched_view} source={require('../assets/images/gladiator2.jpg')}/>
+                <Text>Deep Water</Text>
+                <Text>2021</Text>
+            </View>
+            <View >
+                <Image style={styles.movies_beign_watched_view} />
+                <Text>Deep Water</Text>
+                <Text>2021</Text>
+            </View>
+            <View >
+                <Image style={styles.movies_beign_watched_view} />
+                <Text>Deep Water</Text>
+                <Text>2021</Text>
             </View>
         </ScrollView>
         </View>
@@ -96,15 +108,15 @@ const styles = StyleSheet.create({
     header_text:{
         marginTop:10,
         padding:10,
-        fontSize: 20,
-        fontWeight:'bold',
+        fontSize: 16,
+        fontWeight:'600',
 
     },
     sub_header_text:{
         marginTop:10,
         padding:10,
-        fontSize:18,
-        fontWeight:'bold'
+        fontSize:11,
+        fontWeight:'600'
     },
     new_release_scrollview:{
         flexDirection:'row',
@@ -114,16 +126,17 @@ const styles = StyleSheet.create({
     new_release_scrollview_item:{
         width:200,
         height:300,
-        padding:20,
+        padding:0,
         marginRight:10,
         backgroundColor:'#ddd',
         borderRadius:30,
+        overflow:'hidden'
     },
     categories_view:{
         flexDirection:'row',
         flex:1,
-        alignContent:'space-evenly',
-        alignItems:'stretch'
+        justifyContent:'space-between',
+        alignItems:'center'
 
     },
     categories_scrollview:{
@@ -133,14 +146,44 @@ const styles = StyleSheet.create({
     },
     categories_items:{
         backgroundColor:'#ddd',
-        height:50,
-        width:100, 
+        height:44,
+        minWidth:60,
+        paddingHorizontal:10,
         alignItems:'center',
         marginLeft:10,
         borderRadius:10,
+        justifyContent:'center'
     },
     categories_items_text:{
         fontSize:14,
         fontWeight:'bold',
+    },
+    movies_being_watched_view:{
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        padding:20
+    },
+    movies_being_watched_text1:{
+        fontSize:16,
+        fontWeight:'600',
+    },
+    movies_being_watched_text2:{
+        fontSize:11,
+        fontWeight:"600"
+    },
+    movies_beign_watched:{
+        flexDirection:'row',
+        padding:10,
+        
+
+    },
+    movies_beign_watched_view:{
+        height:200,
+        width:180,
+        backgroundColor:'#ddd',
+        marginLeft:10,
+        borderRadius:20,
+        
     }
 });
