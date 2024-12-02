@@ -56,25 +56,26 @@ const MoviesBeingWatched =() =>{
             </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.movies_beign_watched}>
-            <View >
+            <View style={styles.movies_beign_watched_view2}>
                 <Image style={styles.movies_beign_watched_view} source={require('../assets/images/gladiator2.jpg')}/>
-                <Text>Deep Water</Text>
+                <Text style={{marginTop:8}}>Deep Water</Text>
                 <Text>2021</Text>
             </View>
-            <View >
-                <Image style={styles.movies_beign_watched_view} />
-                <Text>Deep Water</Text>
+            <View style={styles.movies_beign_watched_view2}>
+                <Image style={styles.movies_beign_watched_view} source={require('../assets/images/skeleton.jpg')}/>
+                <Text style={{marginTop:8}}>Deep Water</Text>
                 <Text>2021</Text>
             </View>
-            <View >
-                <Image style={styles.movies_beign_watched_view} />
-                <Text>Deep Water</Text>
+            <View style={styles.movies_beign_watched_view2}>
+                <Image style={styles.movies_beign_watched_view } source={require('../assets/images/wicked.jpg')}/>
+                <Text style={{marginTop:8}}>Deep Water</Text>
                 <Text>2021</Text>
             </View>
         </ScrollView>
         </View>
     );
 };
+ 
 export default function HomeScreen(){
 return(
     <View>
@@ -182,8 +183,11 @@ const styles = StyleSheet.create({
         height:200,
         width:180,
         backgroundColor:'#ddd',
-        marginLeft:10,
         borderRadius:20,
         
+    },
+    movies_beign_watched_view2:{
+        padding:3,
+        marginRight:10,
     }
 });
