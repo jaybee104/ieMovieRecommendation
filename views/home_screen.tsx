@@ -58,23 +58,25 @@ const MoviesBeingWatched =() =>{
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.movies_beign_watched}>
             <View style={styles.movies_beign_watched_view2}>
                 <Image style={styles.movies_beign_watched_view} source={require('../assets/images/gladiator2.jpg')}/>
-                <Text style={{marginTop:8}}>Deep Water</Text>
-                <Text>2021</Text>
+                <Text style={{marginTop:8}}>Gladiator II</Text>
+                <Text>2024</Text>
             </View>
             <View style={styles.movies_beign_watched_view2}>
                 <Image style={styles.movies_beign_watched_view} source={require('../assets/images/skeleton.jpg')}/>
-                <Text style={{marginTop:8}}>Deep Water</Text>
-                <Text>2021</Text>
+                <Text style={{marginTop:8}}>Skeleton</Text>
+                <Text>2023</Text>
             </View>
             <View style={styles.movies_beign_watched_view2}>
                 <Image style={styles.movies_beign_watched_view } source={require('../assets/images/wicked.jpg')}/>
-                <Text style={{marginTop:8}}>Deep Water</Text>
+                <Text style={{marginTop:8}}>Wicked</Text>
                 <Text>2021</Text>
             </View>
         </ScrollView>
         </View>
     );
 };
+
+
  
 export default function HomeScreen(){
 return(
