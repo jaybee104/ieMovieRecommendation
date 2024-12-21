@@ -16,11 +16,9 @@ const NewReleases = () =>{
 
             
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.new_release_scrollview}>
-                
                     <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/mona2.jpg')}/></View>
                     <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/kraven.jpg')}/></View>
                     <View style={styles.new_release_scrollview_item}><Image style={{width:'100%', height:'100%'}} source={require('../assets/images/nightbitch.jpg')}/></View>
-                
                 </ScrollView>
             
         </View>
